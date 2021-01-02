@@ -3,18 +3,11 @@ package hospital;
 import hospital.domain.Employee;
 
 public class HospitalManagement {
-
+    //now open for extensions and closed for modifications
+    //Strategy Pattern: let diff employees perform different work
     public void callUpon(Employee emp) {
-        if (emp instanceof Nurse) {
-            checkVitals();
-        } else if (emp instanceof Doctor) {
-            prescribeMeds();
-        }
+        emp.performDuties();
     }
-    private void checkVitals(){
-        System.out.println("checking vitals");
-    }
-    private void prescribeMeds(){
-        System.out.println("prescribing");
-    }
+
+
 }

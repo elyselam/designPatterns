@@ -2,7 +2,7 @@ package hospital.domain;
 
 
 
-public class Employee {
+abstract public class Employee {
     private int id;
     private String name;
     private String department;
@@ -24,4 +24,6 @@ public class Employee {
                 ", working=" + working +
                 '}';
     }
+
+    public abstract void performDuties();
 }
