@@ -1,26 +1,29 @@
 package reporting;
 
 public class ReportFormatter {
-        String formattedOutput;
+
+    String formattedOutput;
+
     public ReportFormatter(Object obj, FormatType formatType) {
 
-        switch(formatType) {
+        switch (formatType) {
             case XML:
                 formattedOutput = convertObjectToXML(obj);
                 break;
             case CSV:
                 formattedOutput = convertObjectToCVS(obj);
                 break;
-
         }
     }
 
     private String convertObjectToXML(Object obj) {
-        return "XML: <title>" + obj.toString()+"</title>";
+        return "XML: <title>" + obj.toString() + "</title>";
     }
+
     private String convertObjectToCVS(Object obj) {
-        return "CSV : ,,," +obj.toString()+ ",,,";
+        return "CSV : ,,," + obj.toString() + ",,,";
     }
+
     protected String getFormattedValue() {
         return formattedOutput;
 

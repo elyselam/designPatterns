@@ -8,6 +8,10 @@ public class EmployeeReportFormatter extends ReportFormatter {
         super(emp, formatType);
     }
 
+    public String getFormattedEmployee() {
+        return getFormattedValue();
+    }
+
 
 
 

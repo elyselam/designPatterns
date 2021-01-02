@@ -1,6 +1,8 @@
 package clients;
 import domain.Employee;
 import domainDao.EmployeeDao;
+import reporting.EmployeeReportFormatter;
+import reporting.FormatType;
 
 public class ClientModule {
 
@@ -8,6 +10,7 @@ public class ClientModule {
         Employee e = new Employee(1, "e", "sales", true);
 
         ClientModule.hireNewEmployee(e);
+        printEmpReport(e);
 
     }
     public static void hireNewEmployee(Employee emp){
@@ -19,6 +22,7 @@ public class ClientModule {
         employeeDao.deleteEmployee(emp);
     }
     public static void printEmpReport(Employee emp){
-
+        EmployeeReportFormatter formatter = new EmployeeReportFormatter(emp, FormatType.CSV);
+        System.out.println(formatter.getFormattedEmployee());
     }
 }
