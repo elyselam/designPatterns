@@ -1,6 +1,6 @@
-package domainDao;
+package employees.domainDao;
 
-import domain.Employee;
+import employees.domain.Employee;
 
 public class EmployeeDao {
     public void saveEmployee(Employee emp){

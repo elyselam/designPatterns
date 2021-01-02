@@ -1,6 +1,6 @@
-package reporting;
+package employees.reporting;
 
-import domain.Employee;
+import employees.domain.Employee;
 
 public class EmployeeReportFormatter extends ReportFormatter {
 

@@ -1,4 +1,4 @@
-package reporting;
+package employees.reporting;
 
 public class ReportFormatter {
 
