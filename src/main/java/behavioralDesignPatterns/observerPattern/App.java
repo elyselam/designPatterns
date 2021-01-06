@@ -5,10 +5,18 @@ package behavioralDesignPatterns.observerPattern;
  * - loose coupling: 2 objects have little knowledge of each other, subject knows observer implements a certain interface
  * - can add observers whenever by implementing Observer interface, no need to modifying subject
  * - can change both independently
+ *
+ *
+ * WeatherStation & WeatherObserver know very little of each other
  */
 
 public class App {
     public static void main(String[] args) {
+        WeatherSub station = new WeatherSub();
+        WeatherObs observer = new WeatherObs(station);
+
+        station.setPres(2);
+        station.setTemp(3);
 
     }
 }
