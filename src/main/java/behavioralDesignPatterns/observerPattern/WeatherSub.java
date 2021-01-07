@@ -5,6 +5,8 @@ import java.util.List;
 
 /**
  * WeatherStation knows nothing about Observer
+ * only has a list of observers
+ * when a given parameter changes, it notifies Obs
  */
 public class WeatherSub implements Subject{
 
@@ -26,7 +28,7 @@ public class WeatherSub implements Subject{
     }
 
     @Override
-    public void notifyAllObs() {
+    public void notifyObs() {
         for(Observer o: this.oList){
             //update() coming from Subject class
             o.update(pres, temp);
@@ -35,11 +37,11 @@ public class WeatherSub implements Subject{
 
     public void setPres(int pres) {
         this.pres = pres;
-        notifyAllObs();
+        notifyObs();
     }
 
     public void setTemp(int temp) {
         this.temp = temp;
-        notifyAllObs();
+        notifyObs();
     }
 }

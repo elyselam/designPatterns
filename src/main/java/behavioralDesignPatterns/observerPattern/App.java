@@ -13,6 +13,7 @@ package behavioralDesignPatterns.observerPattern;
 public class App {
     public static void main(String[] args) {
         WeatherSub station = new WeatherSub();
+        //set observer to observe weather station
         WeatherObs observer = new WeatherObs(station);
 
         station.setPres(2);

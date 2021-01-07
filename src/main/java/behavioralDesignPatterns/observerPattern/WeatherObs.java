@@ -1,9 +1,12 @@
 package behavioralDesignPatterns.observerPattern;
 
+/**
+ * obs don't know about concrete implementation of Sub
+ * just have update() method that is called
+ */
 public class WeatherObs implements Observer{
     private int pres;
     private int temp;
-
     private Subject subject;
 
     public WeatherObs(Subject subject) {
